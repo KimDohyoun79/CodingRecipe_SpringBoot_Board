@@ -8,16 +8,22 @@
 <h1>Home page</h1>
 
 <!-- 3.1_게시글 작성_작성 페이지 -->
-<button onclick="saveReq()">button 태근 : 글작성</button> &nbsp;&nbsp;
-<a href="/board/save">a 태그 : 글작성</a>
+<button onclick="saveReq()">button 태그 : 글작성</button> &nbsp;&nbsp;
+<a href="/board/save">a 태그 : 글작성</a> <br><br>
+<button onclick="listReq()">button 태근 : 글목록</button>
 
 
 
 </body>
 <script>
-    <!-- 3.1_게시글 작성_작성 페이지 -->
-    const saveReq = () =>{
+    // 3.1_게시글 작성_작성 페이지
+    const saveReq = () => {
         location.href = "/board/save"
+    }
+
+    // 4_게시글 목록(boardlist)
+    const listReq = () => {
+        location.href = "/board/"
     }
 </script>
 </html>

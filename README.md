@@ -87,7 +87,7 @@ grant all privileges on db_codingrecipe.* to user_codingrecipe@localhost;
 - [완료] 3.2_게시글 작성_게시글 작성
   - `BoardDTO`, `BoardEntity`, `BoardService`, `BaseEntity`, `Repository` 
   - `@RequiredArgsConstructor`
-- [완료] 
+- [완료] 4_게시글 목록(boardlist)
 - [완료]
 - [완료]
 - [완료]
