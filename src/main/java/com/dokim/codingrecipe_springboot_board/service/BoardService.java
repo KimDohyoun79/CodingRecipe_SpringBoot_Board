@@ -6,8 +6,10 @@ import com.dokim.codingrecipe_springboot_board.Repository.BoardRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -30,5 +32,23 @@ public class BoardService {
              boardDTOList.add(BoardDTO.toBoardDTO(boardEntity));
          }
          return boardDTOList;
+    }
+
+    // 05_게시글 조회(Board Detail)
+    @Transactional
+    public void updateHits(Long id) {
+        boardRepository.updateHits(id);
+    }
+
+    @Transactional
+    public BoardDTO findById(Long id) {
+        Optional<BoardEntity> optionalBoardEntity = boardRepository.findById(id);
+        if (optionalBoardEntity.isPresent()) {
+            BoardEntity boardEntity = optionalBoardEntity.get();
+            BoardDTO boardDTO = BoardDTO.toBoardDTO(boardEntity);
+            return boardDTO;
+        } else {
+            return null;
+        }
     }
 }
