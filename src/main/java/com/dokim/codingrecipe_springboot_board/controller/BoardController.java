@@ -74,4 +74,11 @@ public class BoardController {
     }
 
 
+    // 7_게시글 삭제(Board Delete)
+    @GetMapping("/delete/{id}")
+    public String delete(@PathVariable Long id) {
+        boardService.delete(id);
+        return "redirect:/board/";
+    }
+
 }

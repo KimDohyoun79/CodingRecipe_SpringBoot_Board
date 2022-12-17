@@ -93,7 +93,7 @@ grant all privileges on db_codingrecipe.* to user_codingrecipe@localhost;
   - `detail.html`
 - [완료] 6_게시글 수정(Board Update)
   - `update.html`
-- [완료]
+- [완료] 7_게시글 삭제(Board Delete)
 - [완료]
 - [완료]
 - [완료]

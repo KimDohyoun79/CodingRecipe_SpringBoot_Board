@@ -59,4 +59,11 @@ public class BoardService {
         boardRepository.save(boardEntity);
         return findById(boardDTO.getId());
     }
+
+
+    // 7_게시글 삭제(Board Delete)
+    public void delete(Long id) {
+        boardRepository.deleteById(id);
+    }
+
 }
